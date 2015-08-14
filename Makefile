@@ -1,6 +1,21 @@
-all: clean
-	texi2pdf main.tex
+TEXNAME=main
+PDFNAME=main
 
-clean:
-	rm -f *.aux *.blg *.lof *.lot *.log *.bbl *.blg *.toc
+all: clean latexmk
+
+latexmk:
+	latexmk -pdf ${TEXNAME}
+
+texi2pdf:
+	texi2pdf --build-dir=build/ ${TEXNAME}.tex -o ${PDFNAME}.pdf
+
+clean: texi2pdf_clean latexmk_clean
 	rm -f *.pdf
+
+latexmk_clean:
+	rm -f *.fls *.fdb_latexmk *.dvi
+
+texi2pdf_clean:
+	rm -rf build/
+	rm -f *.aux *.blg *.lof *.lot *.log *.bbl *.blg *.toc
+

@@ -9,6 +9,15 @@ To clean everything up:
 
     make clean
 
+Expected errors due to missing figures:
+
+    Latexmk: Reference `exponent-format' on page 14 undefined 
+    Latexmk: Reference `mantissa-format' on page 14 undefined 
+    Latexmk: Reference `unnorm-math' on page 14 undefined 
+    Latexmk: Reference `opt:be' on page 16 undefined 
+    Latexmk: Reference `range-tracking' on page 16 undefined 
+
+
 Editing `main.tex`
 ------------------
 
@@ -198,3 +207,7 @@ the LaTeX manual by Leslie Lamport:
     74-74    BibTeX
     140-147  Format of the .bib File (also gives info on other entry types)        
     187-188  Bibliography and Citation
+
+### Sample bibiliography
+
+You can see `example.bib` for an example of how to write bibliography entries.

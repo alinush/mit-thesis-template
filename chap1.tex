@@ -29,7 +29,7 @@ discussed.
 
 The idea of micro-optimization is motivated by the recent trends in computer
 architecture towards low-level parallelism and small, pipelineable
-instruction sets \cite{patterson:risc,rad83}.  By getting rid of more
+instruction sets \cite{article-minimal,article-full}.  By getting rid of more
 complex instructions and concentrating on optimizing frequently used
 instructions, substantial increases in performance were realized.
 
@@ -37,11 +37,11 @@ Another important motivation was the trend towards placing more of the
 burden of performance on the compiler.  Many of the new architectures depend
 on an intelligent, optimizing compiler in order to realize anywhere near
 their peak performance
-\cite{ellis:bulldog,pet87,coutant:precision-compilers}.  In these cases, the
+\cite{article-crossref,whole-journal,inbook-minimal}.  In these cases, the
 compiler not only is responsible for faithfully generating native code to
 match the source language, but also must be aware of instruction latencies,
 delayed branches, pipeline stages, and a multitude of other factors in order
-to generate fast code \cite{gib86}.
+to generate fast code \cite{inbook-full}.
 
 Taking these ideas one step further, it seems that the floating point
 operations that are normally single, large instructions can be further broken
@@ -88,7 +88,7 @@ to prevent bits from ``falling off'' the end during multiplications, the
 normalization can be postponed until after a sequence of several
 multiplies\footnote{Using unnormalized numbers for math is not a new idea; a
 good example of it is the Control Data CDC 6600, designed by Seymour Cray.
-\cite{thornton:cdc6600} The CDC 6600 had all of its instructions performing
+\cite{book-minimal} The CDC 6600 had all of its instructions performing
 unnormalized arithmetic, with a separate {\tt NORMALIZE} instruction.}.
 
 % This is an example of how you would use tgrind to include an example
@@ -201,7 +201,7 @@ when the amount of time spent on the shifts and adds is less than the time
 that would be spent doing the multiplication.  Since the time costs of these
 operations are known to the compiler in order for it to do scheduling, it is
 easy for the compiler to determine when this optimization is worth using.}.
-\cite{magenheimer:precision}
+\cite{book-full}
 
 \section{Other optimizations}
 
@@ -211,7 +211,7 @@ The current trend is towards duplicating hardware at the lowest level to
 provide parallelism\footnote{This can been seen in the i860; floating point
 additions and multiplications can proceed at the same time, and the RISC
 core be moving data in and out of the floating point registers and providing
-flow control at the same time the floating point units are active. \cite{byte:i860}}
+flow control at the same time the floating point units are active. \cite{booklet-minimal}}
 
 Conceptually, it is easy to take advantage to low-level parallelism in the
 instruction stream by simply adding more functional units to the $\mu$FPU,
@@ -224,7 +224,7 @@ instruction stream, and without it, much of the extra resources will go to
 waste.  One process used to make more instructions potentially schedulable
 at any given time is ``trace scheduling''.  This technique originated in the
 Bulldog compiler for the original VLIW machine, the ELI-512.
-\cite{ellis:bulldog,colwell:vliw}  In trace scheduling, code can be
+\cite{article-crossref,incollection-minimal}  In trace scheduling, code can be
 scheduled through many basic blocks at one time, following a single
 potential ``trace'' of program execution.  In this way, instructions that
 {\em might\/} be executed depending on a conditional branch further down in
@@ -245,6 +245,6 @@ hardware side, support can be added to allow data to be recirculated back
 into the beginning of the pipeline from the end, saving a trip through the
 registers.  On the software side, the compiler can utilize several tricks to
 try to fill up as many of the pipeline delay slots as possible, as
-seendescribed by Gibbons. \cite{gib86}
+seendescribed by Gibbons. \cite{inbook-full}
 
 
