@@ -207,7 +207,3 @@ the LaTeX manual by Leslie Lamport:
     74-74    BibTeX
     140-147  Format of the .bib File (also gives info on other entry types)        
     187-188  Bibliography and Citation
-
-### Sample bibiliography
-
-You can see `example.bib` for an example of how to write bibliography entries.
