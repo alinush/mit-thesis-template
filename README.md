@@ -18,6 +18,15 @@ Expected errors due to missing figures:
     Latexmk: Reference `range-tracking' on page 16 undefined 
 
 
+If you're doing a PhD thesis
+----------------------------
+
+You might need to uncomment the `\include{signature}` in `main.tex`
+depending on your department.
+
+There is a `propcover.tex` file you can use for your PhD proposal.
+
+
 Editing `main.tex`
 ------------------
 
