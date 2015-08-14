@@ -5,6 +5,10 @@
 % 
 %
 % $Log: cover.tex,v $
+% Revision 1.8.1 2015/08/14 8:58:00  alinush
+% Citations in .tex files now point to dummy entries in main.bib
+% Font smoothness issues solved. Created an easy to use Makefile.
+%
 % Revision 1.8  2008/05/13 15:02:15  jdreed
 % Degree month is June, not May.  Added note about prevdegrees.
 % Arthur Smith's title updated
@@ -59,7 +63,11 @@
 % If the thesis is for two degrees simultaneously, list them both
 % separated by \and like this:
 % \degree{Doctor of Philosophy \and Master of Science}
-\degree{Bachelor of Science in Computer Science and Engineering}
+% If the thesis is for a Masters degree:
+% \degree{Master of Science in Electrical Engineering and Computer Science}
+% If this is a Bachelor's degree thesis:
+% \degree{Bachelor of Science in Computer Science and Engineering}
+\degree{Master of Science in Electrical Engineering and Computer Science}
 
 % As of the 2007-08 academic year, valid degree months are September, 
 % February, or June.  The default is June.
