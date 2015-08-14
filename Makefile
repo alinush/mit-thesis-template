@@ -1,4 +1,4 @@
-all:
+all: clean
 	texi2pdf main.tex
 
 clean:
